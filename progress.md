@@ -1,16 +1,18 @@
 # progress
 
-also, and mainly, question needed to answer during the making of this project. 
+to-do list and, mainly, questions needed to be answers during the making of this project. 
 
 
 ## todo
 
-- [] seed db
+- seed db
+
 
 ## doing
 
-- [] user model and user login
-- [] session and cookies
+- rspec
+- user model and user login
+- session and cookies
 
 
 ## done
@@ -18,7 +20,9 @@ also, and mainly, question needed to answer during the making of this project.
 
 ## side quests
 
-- [] rakefile?
-- [] config.ru?
+- rakefile?
+- config.ru?
+- bin?
+
 
 ## diary
