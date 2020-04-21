@@ -23,6 +23,6 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - rakefile?
 - config.ru?
 - bin?
-
+- application record read about it
 
 ## diary
