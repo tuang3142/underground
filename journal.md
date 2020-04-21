@@ -6,6 +6,7 @@ to-do list and, mainly, questions needed to be answers during the making of this
 ## todo
 
 - seed db
+- add static pages
 
 
 ## doing
@@ -24,6 +25,7 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - config.ru?
 - bin?
 - yield?
-
+- csrf meta tags
+- csp meta tag
 
 ## diary
