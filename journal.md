@@ -27,6 +27,7 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - config.ru?
 - bin?
 - application record read about it
+- database index?
 
 
 ## diary
