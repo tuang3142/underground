@@ -6,16 +6,18 @@ to-do list and, mainly, questions needed to be answers during the making of this
 ## todo
 
 - seed db
+- integration test
 
 
 ## doing
 
-- rspec
 - user model and user login
 - session and cookies
 
 
 ## done
+
+- rspec
 
 
 ## side quests
