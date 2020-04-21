@@ -23,6 +23,7 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - rakefile?
 - config.ru?
 - bin?
+- yield?
 
 
 ## diary
