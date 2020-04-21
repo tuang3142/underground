@@ -7,6 +7,7 @@ to-do list and, mainly, questions needed to be answers during the making of this
 
 - seed db
 - integration test
+- login with google (both?)
 
 
 ## doing
