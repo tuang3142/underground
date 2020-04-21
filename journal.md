@@ -1,6 +1,6 @@
 # progress
 
-to-do list and, mainly, questions needed to be answers during the making of this project. 
+to-do list and, mainly, questions needed to be answers during the making of this project.
 
 
 ## todo
@@ -25,4 +25,9 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - bin?
 - application record read about it
 
+
 ## diary
+
+- no need factory for every project
+- psql-cli's so cool
+
