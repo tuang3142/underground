@@ -1,22 +1,24 @@
 # progress
 
-to-do list and, mainly, questions needed to be answers during the making of this project. 
+to-do list and, mainly, questions needed to be answers during the making of this project.
 
 
 ## todo
 
 - seed db
-- add static pages
+- integration test
+- login with google (both?)
 
 
 ## doing
 
-- rspec
 - user model and user login
 - session and cookies
 
 
 ## done
+
+- rspec
 
 
 ## side quests
@@ -27,5 +29,12 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - yield?
 - csrf meta tags
 - csp meta tag
+- application record read about it
+- database index?
+
 
 ## diary
+
+- no need factory for every project
+- psql-cli's so cool
+- authenticate allow checking user password is correct
