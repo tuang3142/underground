@@ -31,6 +31,7 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - csp meta tag
 - application record read about it
 - database index?
+- write about bcrypt (digest, virtual attribute: pw and pw confirmation, authentication, how good it is?)
 
 
 ## diary
