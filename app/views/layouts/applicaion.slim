@@ -1,17 +1,14 @@
 doctype html
 html
   head
-    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
     title
-      = yield(:title)
-      | | Youtube videos worth sharing
-    meta charset="utf-8" /
+      = full_title(yield(:title))
+    meta[charset="utf-8"]
+    meta[name="viewport" content="width=device-width, initial-scale=1"]
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    / = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = render 'layouts/shim'
   body
-    = yield
-
-/ This code arranges to include the application stylesheet and JavaScript, which are part of the asset pipeline (Section 5.2.1), together with the Rails method csp_meta_tag, which implements Content Security Policy (CSP) to mitigate cross-site scripting (XSS) attacks, and csrf_meta_tags, which mitigates cross-site request forgery (CSRF) attacks. (One huge advantage of using a mature framework like Rails is that it worries about such things so that we don’t have to.)
-
+    = render 'layouts/header'
