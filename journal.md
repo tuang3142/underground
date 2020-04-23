@@ -38,3 +38,4 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - no need factory for every project
 - psql-cli's so cool
 - authenticate allow checking user password is correct
+- delete and restart. it will work.
