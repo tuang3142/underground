@@ -14,4 +14,5 @@ class User < ApplicationRecord
   #   byebug
   #   self.email.downcase!
   # end
+  # also need to validate password format
 end
