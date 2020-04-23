@@ -1,8 +1,7 @@
 class User < ApplicationRecord
-  validates_presence_of :name, :email
-  validates_uniqueness_of :name, :email
-
-  validates :password, length: { minimum: 6 }
+  validates :password, presence: true, length: { minimum: 6 }
+  validates :email, presence: true, uniqueness: true
+  validates :name, presence: true, uniqueness: true
 
   # before_save :downcase_email
 
