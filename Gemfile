@@ -66,4 +66,5 @@ end
 group :test do
   # One-liner tests
   gem 'shoulda-matchers'
+  gem 'rails-controller-testing'
 end
