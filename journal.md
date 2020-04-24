@@ -4,8 +4,9 @@ to-do list and, mainly, questions needed to be answers during the making of this
 
 ## todo
 
+- home dont need to be in static-pages
 - seed db
-- integration test
+- integration test?
 - login with google (both?)
 
 ## doing
@@ -15,7 +16,6 @@ to-do list and, mainly, questions needed to be answers during the making of this
 
 ## done
 
-- user models
 - homepage
 - make it sassy
 - rspec
