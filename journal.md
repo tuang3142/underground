@@ -32,6 +32,7 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - database index?
 - write about bcrypt (digest, virtual attribute: pw and pw confirmation, authentication, how good it is?)
 - why layout/_headers
+- no need specify link for user new?
 
 ## diary
 
