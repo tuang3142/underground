@@ -23,5 +23,7 @@ RSpec.describe UsersController, type: :controller do
     it { should permit(:email, :password).for(:create, params: @params).on(:user) }
 
     it { should redirect_to root_path }
+
+    it { expect(User.count).to eq 1}
   end
 end

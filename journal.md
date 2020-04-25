@@ -4,6 +4,7 @@ to-do list and, mainly, questions needed to be answers during the making of this
 
 ## todo
 
+- display flash instead
 - pagy
 - home dont need to be in static-pages
 - seed db
