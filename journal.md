@@ -34,9 +34,10 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - application record read about it
 - database index?
 - write about bcrypt (digest, virtual attribute: pw and pw confirmation, authentication, how good it is?)
-- why layout/_headers
+- why layout/headers
 - no need specify link for user new?
 - what is uneditable input? search for it in project
+- why is the name cookies?
 
 ## diary
 
@@ -47,3 +48,6 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - bootstrap for the win.
 - ssl to prevent session hijacking
 - http is stateless: independence
+- render is not a redirect request, so flash persists
+- session shorter than cookies, which does the same thing that store user info such as id
+- consider session is a temporary cookie, expires immediately after browser close
