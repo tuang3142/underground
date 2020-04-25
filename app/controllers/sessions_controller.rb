@@ -6,8 +6,9 @@ class SessionsController < ApplicationController
     user = User.find_by(email: email)
     if user&.authenticate(password)
       flash[:success] = 'Login successfully. Welcome back!'
-      redirect_to root
+      redirect_to root_path
     else
+      flash[:danger] = 'Invalid email/password'
       render :new
     end
   end
@@ -19,6 +20,6 @@ class SessionsController < ApplicationController
   def login_params
     p = params.require(:session).permit(:email, :password)
 
-    [p[:email], p[:password]]
+    [p[:email].downcase, p[:password]]
   end
 end

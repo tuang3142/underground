@@ -4,12 +4,12 @@ to-do list and, mainly, questions needed to be answers during the making of this
 
 ## todo
 
-- display flash instead
 - pagy
 - home dont need to be in static-pages
 - seed db
 - integration test?
 - login with google (both?)
+- css make it fit the center of the screen
 
 ## doing
 
@@ -18,6 +18,7 @@ to-do list and, mainly, questions needed to be answers during the making of this
 
 ## done
 
+- display flash instead
 - homepage
 - make it sassy
 - rspec
