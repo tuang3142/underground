@@ -34,10 +34,9 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - application record read about it
 - database index?
 - write about bcrypt (digest, virtual attribute: pw and pw confirmation, authentication, how good it is?)
-- why layout/headers
 - no need specify link for user new?
-- what is uneditable input? search for it in project
 - why is the name cookies?
+- why store the digest of the token?
 
 ## diary
 
