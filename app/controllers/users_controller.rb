@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       flash[:success] = 'Account created. Welcome!'
       redirect_to root_path
     else
-      flash[:danger] = @user&.errors.full_messages.first
+      flash[:danger] = @user.errors.full_messages.first if @user.errors.any?
       render :new
     end
   end
