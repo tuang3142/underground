@@ -4,6 +4,7 @@ to-do list and, mainly, questions needed to be answers during the making of this
 
 ## todo
 
+- pagy
 - home dont need to be in static-pages
 - seed db
 - integration test?
@@ -33,6 +34,7 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - write about bcrypt (digest, virtual attribute: pw and pw confirmation, authentication, how good it is?)
 - why layout/_headers
 - no need specify link for user new?
+- what is uneditable input? search for it in project
 
 ## diary
 
