@@ -23,8 +23,8 @@ class User < ApplicationRecord
   end
 
   def remember
-    token = self.new_token
-    update_attribute(:remember_digest, self.digest(token))
+    token = new_token
+    update_attribute(:remember_digest, digest(token))
   end
 
   private
