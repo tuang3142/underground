@@ -45,3 +45,4 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - delete and restart. it will work.
 - bootstrap for the win.
 - ssl to prevent session hijacking
+- http is stateless: independence
