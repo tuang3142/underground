@@ -51,3 +51,4 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - render is not a redirect request, so flash persists
 - session shorter than cookies, which does the same thing that store user info such as id
 - consider session is a temporary cookie, expires immediately after browser close
+- instead of storing the token, we store token digest. each time request with cookies is sent, we compare the digest
