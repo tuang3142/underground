@@ -1,8 +1,18 @@
 require 'rails_helper'
 
 RSpec.describe SessionsController, type: :controller do
-  subject { get :new }
+  describe 'GET #new' do
+    subject { get :new }
 
-  it { expect(response).to have_http_status(200) }
+    it { expect(response).to have_http_status(200) }
+  end
+
+  # describe 'POST #create' do
+  #   subject { post :create }
+
+  #   it { expect(response).to have_http_status(200) }
+
+  #   it { should redirect_to root_path }
+  # end
 end
 
