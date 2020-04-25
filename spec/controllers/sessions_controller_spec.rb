@@ -11,7 +11,7 @@ RSpec.describe SessionsController, type: :controller do
   #   subject { post :create }
 
   #   it { expect(response).to have_http_status(200) }
-
+      # it has flash
   #   it { should redirect_to root_path }
   # end
 end
