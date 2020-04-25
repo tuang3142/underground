@@ -43,4 +43,5 @@ to-do list and, mainly, questions needed to be answers during the making of this
 - psql-cli's so cool
 - authenticate allow checking user password is correct
 - delete and restart. it will work.
-- bootstrap for the win
+- bootstrap for the win.
+- ssl to prevent session hijacking
