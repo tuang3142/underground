@@ -51,7 +51,7 @@ class MicropostsController < ApplicationController
 end
 
 class YoutubeApi
-  BASE_URL ='https://www.googleapis.com/youtube/v3/videos?part=id%2C+snippet'
+  BASE_URL = 'https://www.googleapis.com/youtube/v3/videos?part=id%2C+snippet'.freeze
 
   AUTH_KEY = Figaro.env.youtube_api_key
 
