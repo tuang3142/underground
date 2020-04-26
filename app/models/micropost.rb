@@ -35,7 +35,7 @@ class Micropost < ApplicationRecord
   end
 
   def get_id(link)
-    id = link.gsub(%r{(>|<)}i, '').split(%r{(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)})
+    id = link.gsub(/(>|<)/i, '').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/)
     return id if id[2].nil?
 
     id[2].split(/[^0-9a-z_\-]/i)[0]
