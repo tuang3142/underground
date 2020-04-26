@@ -1,0 +1,8 @@
+- provide(:title, 'Submit a link')
+h1 Submit a link
+.row
+  .col-md-6.col-md-offset-3
+    = form_for(@post) do |f|
+      = f.label :link
+      = f.text_field :link
+      = f.submit "Submit", class: "btn btn-primary btm-default"
