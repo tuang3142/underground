@@ -5,19 +5,19 @@ class Micropost < ApplicationRecord
 
   validates :link, presence: true
 
-  validate :video_must_be_available
+  validate :link_must_be_available
 
   def title
     data[:title]
   end
 
   def description
-    data[:description]
+    trim data[:description]
   end
 
   private
 
-  def video_must_be_available
+  def link_must_be_available
     return true unless data.blank?
 
     errors.add(:link, 'unavailable')
@@ -25,7 +25,20 @@ class Micropost < ApplicationRecord
   end
 
   def data
-    @data ||= YoutubeApi.get(link)
+    @data ||= YoutubeApi.get get_id(link)
+  end
+
+  def trim(text)
+    return text unless text.length > 700
+
+    text.slice(0, 697) + '...'
+  end
+
+  def get_id(link)
+    id = link.gsub(/(>|<)/i,'').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/)
+    return id if id[2].nil?
+
+    id[2].split(/[^0-9a-z_\-]/i)[0]
   end
 end
 
