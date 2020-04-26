@@ -6,9 +6,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: email)
     if user&.authenticate(password)
       flash[:success] = 'Login successfully'
-      log_in user
-      remember_user_if remember_me
-      redirect_to root_path
+      log_in_and_remember_user_if remember_me
     else
       flash.now[:danger] = 'Invalid email/password'
       render :new
@@ -29,11 +27,9 @@ class SessionsController < ApplicationController
     [p[:email].downcase, p[:password], p[:remember_me]]
   end
 
-  def remember_user_if(remember_me)
-    if remember_me
-      remember
-    else
-      forget user
-    end
+  def log_in_and_remember_user_if(remember_me)
+    log_in user
+    remember_me ? remember(user) : forget(user)
+    redirect_to root_path
   end
 end
