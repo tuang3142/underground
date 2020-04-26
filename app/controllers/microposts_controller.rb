@@ -1,5 +1,5 @@
 class MicropostsController < ApplicationController
-  # before_action :validate_user_login, only %i[new create]
+  before_action :verify_user
 
   def new
     @post = current_user.microposts.new
@@ -18,11 +18,10 @@ class MicropostsController < ApplicationController
 
   private
 
-  def vaidate_user_login
-    if current_user.nil?
-      flash[:danger] = 'You must login to submit a link'
-      return
-    end
+  def verify_user
+    return unless current_user.nil?
+
+    flash[:danger] = 'You must login to submit a link'
   end
 
   def post_params
