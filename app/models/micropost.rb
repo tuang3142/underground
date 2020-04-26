@@ -12,7 +12,7 @@ class Micropost < ApplicationRecord
   end
 
   def description
-    trim data[:description]
+    trim data[:description], 200
   end
 
   def id
@@ -34,10 +34,10 @@ class Micropost < ApplicationRecord
     @data ||= YoutubeApi.get get_id(link)
   end
 
-  def trim(text)
-    return text unless text.length > 700
+  def trim(text, lim)
+    return text unless text.length > lim
 
-    text.slice(0, 697) + '...'
+    text.slice(0, lim-3) + '...'
   end
 
   def get_id(link)

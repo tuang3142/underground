@@ -1,14 +1,14 @@
 .center
-  .album.text-muted
-    .container
-      .row
-        - @microposts.each do |m|
-          .col-md-6
-            h2 = m.title
-            h5#author "Posted by #{m.user.email}"
-            .embed-responsive.embed-responsive-4by3
+  .container
+    .row
+      - @microposts.each do |m|
+        .card.border-light.mb-3.col-md-6
+          .card-body
+            h4.card-title = m.title
+            h6.card-subtitle.mb-2.text-muted Posted by #{m.user.email}
+            .embed-responsive.embed-responsive-16by9
               iframe.iframe.embed-responsive-item src="https://www.youtube.com/embed/#{m.id}"
-            p = m.description
-            p
-              a.btn.btn-secondary href="#" role="button"  View details »
+            p.card-text = m.description
+            a.card-link href="#"  Card link
+            a.card-link href="#"  Another link
 

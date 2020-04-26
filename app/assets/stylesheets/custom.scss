@@ -34,12 +34,9 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: left;
-}
-
-#author {
-  text-align: left;
+  font-weight: bold;
 }
 
 p {
@@ -83,4 +80,9 @@ input, textarea, select, .uneditable-input {
 /* videos */
 .embed-responsive {
   margin-bottom: 10px;
+}
+
+/* card */
+.card {
+  text-align: left;
 }
