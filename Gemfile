@@ -52,6 +52,9 @@ gem 'bootstrap-sass', '3.4.1'
 # Makes http fun! Also, makes consuming restful web services dead easy.
 gem 'httparty', '~> 0.13.7'
 
+# Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file
+gem 'figaro', '~> 1.1', '>= 1.1.1'
+
 # group
 group :development, :test do
   # Test framework
