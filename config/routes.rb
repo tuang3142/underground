@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy'
 
   resources :users, only: %i[new create]
-  resources :microposts
+  resources :microposts, only: %i[new create index]
 end
