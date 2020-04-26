@@ -1,6 +1,10 @@
 class MicropostsController < ApplicationController
   before_action :verify_user, only: %i[new create]
 
+  def index
+    @microposts = Micropost.all
+  end
+
   def new
     @micropost = current_user.microposts.new
   end
