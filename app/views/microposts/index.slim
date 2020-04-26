@@ -9,6 +9,10 @@
             .embed-responsive.embed-responsive-16by9
               iframe.iframe.embed-responsive-item src="https://www.youtube.com/embed/#{m.id}"
             p.card-text = m.description
-            a.card-link href="#"  Card link
-            a.card-link href="#"  Another link
-
+            - if logged_in?
+              button.btn.btn-default.btn-sm type="button"
+                span.glyphicon.glyphicon-thumbs-up
+                |  Like
+              button.btn.btn-default.btn-sm type="button"
+                span.glyphicon.glyphicon-thumbs-down
+                |  Ekil
