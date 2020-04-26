@@ -41,6 +41,8 @@ class Micropost < ApplicationRecord
   end
 
   def get_id(link)
+    return if link.nil?
+
     id = link.gsub(/(>|<)/i, '').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/)
     return id if id[2].nil?
 

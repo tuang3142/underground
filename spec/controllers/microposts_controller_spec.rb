@@ -8,28 +8,4 @@ RSpec.describe UsersController, type: :controller do
       is_expected.to render_template :new
     end
   end
-
-  # describe 'POST /create' do
-  #   before do
-  #     @user = User.create
-  #     @params = {
-  #       micropost: {
-  #         link: '
-  #       }
-  #   end
-  # end
-
-  describe 'get /index' do
-    it do
-      get :index
-
-      is_expected.to render_template :index
-    end
-  end
-
-  # describe 'POST /upvote' do
-  # end
-
-  # describe 'POST /downvote' do
-  # end
 end
