@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     if user&.authenticate(password)
       flash[:success] = 'Login successfully'
       log_in user
+      remember user
       redirect_to root_path
     else
       flash.now[:danger] = 'Invalid email/password'
