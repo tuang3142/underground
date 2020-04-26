@@ -7,11 +7,7 @@ class SessionsController < ApplicationController
     if user&.authenticate(password)
       flash[:success] = 'Login successfully'
       log_in user
-      if remember_me
-        remember user
-      else
-        forget user
-      end
+      remember_user_if remember_me
       redirect_to root_path
     else
       flash.now[:danger] = 'Invalid email/password'
@@ -31,5 +27,13 @@ class SessionsController < ApplicationController
     p = params.require(:session).permit(:email, :password, :remember_me)
 
     [p[:email].downcase, p[:password], p[:remember_me]]
+  end
+
+  def remember_user_if(remember_me)
+    if remember_me
+      remember
+    else
+      forget user
+    end
   end
 end
