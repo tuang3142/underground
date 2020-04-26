@@ -17,6 +17,7 @@ class Micropost < ApplicationRecord
 
   def id
     return if link.nil?
+
     get_id(link)
   end
 
