@@ -15,6 +15,10 @@ class Micropost < ApplicationRecord
     trim data[:description]
   end
 
+  def id
+    get_id(link)
+  end
+
   private
 
   def link_must_be_available

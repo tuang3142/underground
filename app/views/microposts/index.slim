@@ -5,6 +5,8 @@
         - @microposts.each do |m|
           .col-md-6
             h2 = m.title
+            h5#author "Posted by #{m.user.email}"
+            iframe.rounded src="https://www.youtube.com/embed/#{m.id}"
             p = m.description
             p
               a.btn.btn-secondary href="#" role="button"  View details »
