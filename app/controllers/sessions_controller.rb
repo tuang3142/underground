@@ -8,6 +8,11 @@ class SessionsController < ApplicationController
       flash[:success] = 'Login successfully'
       log_in user
       remember_me ? remember user : forget user
+      if remember_me
+        remember user
+      else
+        forget user
+      end
       redirect_to root_path
     else
       flash.now[:danger] = 'Invalid email/password'
