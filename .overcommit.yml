@@ -1,0 +1,15 @@
+verify_signatures: false
+
+PreCommit:
+  RuboCop:
+    enabled: true
+    on_fail: warn
+
+  TrailingWhitespace:
+    enabled: true
+    on_fail: ward
+
+PrePush:
+  RSpec:
+    enabled: true
+
