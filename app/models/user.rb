@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
 
+  has_many :microposts
+
   validates :password, presence: true, length: { minimum: 6 }
 
   validates :email, presence: true, uniqueness: true
