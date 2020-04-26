@@ -29,7 +29,6 @@ class Micropost < ApplicationRecord
   end
 end
 
-
 class YoutubeApi
   BASE_URL = 'https://www.googleapis.com/youtube/v3/videos?part=id%2C+snippet'.freeze
 
