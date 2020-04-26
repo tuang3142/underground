@@ -11,7 +11,8 @@ class MicropostsController < ApplicationController
       flash[:success] = 'Link created'
       redirect_to root_path
     else
-      flash[:danger] = @micropost.errors.full_messages.first if @micropost.errors.any?
+      msg = @micropost.errors.full_messages.first if @micropost.errors.any?
+      flash[:danger] = msg
       render :new
     end
   end
