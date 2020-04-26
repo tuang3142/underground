@@ -49,6 +49,8 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Converts Less to Sass
 gem 'bootstrap-sass', '3.4.1'
 
+# Makes http fun! Also, makes consuming restful web services dead easy.
+gem 'httparty', '~> 0.13.7'
 
 # group
 group :development, :test do

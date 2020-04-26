@@ -37,3 +37,21 @@ class MicropostsController < ApplicationController
     %i[link]
   end
 end
+
+
+class YoutubeApi
+  include HTTParty
+
+  base_uri 'googleapis.com/youtube/v3/videos'
+
+  AUTH_KEY = 'AIzaSyDF9ucx2EHpk17eVmompuxH921hCc6TfFo'
+
+  attr_reader :title, :description
+
+  def initialize(video_id)
+
+  end
+
+  def self.request(video_id)
+  end
+end
