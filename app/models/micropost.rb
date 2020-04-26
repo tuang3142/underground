@@ -37,7 +37,7 @@ class Micropost < ApplicationRecord
   def trim(text, lim)
     return text unless text.length > lim
 
-    text.slice(0, lim-3) + '...'
+    text.slice(0, lim - 3) + '...'
   end
 
   def get_id(link)
