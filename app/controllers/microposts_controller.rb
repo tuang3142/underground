@@ -1,8 +1,8 @@
 class MicropostsController < ApplicationController
-  before_action :validate_user_login, only %i[new create]
+  # before_action :validate_user_login, only %i[new create]
 
   def new
-    @post = Micropost.new
+    @post = current_user.microposts.new
   end
 
   def create
