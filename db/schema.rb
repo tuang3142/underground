@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_26_121652) do
+ActiveRecord::Schema.define(version: 2020_04_26_235844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "likes", force: :cascade do |t|
+    t.bigint "micropost_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["micropost_id"], name: "index_likes_on_micropost_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.text "link"
@@ -33,5 +42,7 @@ ActiveRecord::Schema.define(version: 2020_04_26_121652) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "likes", "microposts"
+  add_foreign_key "likes", "users"
   add_foreign_key "microposts", "users"
 end
