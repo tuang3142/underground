@@ -7,7 +7,6 @@ class SessionsController < ApplicationController
     if user&.authenticate(password)
       flash[:success] = 'Login successfully'
       log_in user
-      remember_me ? remember user : forget user
       if remember_me
         remember user
       else
