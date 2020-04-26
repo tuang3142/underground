@@ -16,6 +16,7 @@ class Micropost < ApplicationRecord
   end
 
   def id
+    return if link.nil?
     get_id(link)
   end
 
@@ -58,6 +59,7 @@ class YoutubeApi
     return {} if !status.eql?('200') || response['items'].blank?
 
     {
+      id: video_id,
       title: response['items'][0]['snippet']['title'],
       description: response['items'][0]['snippet']['description']
     }
