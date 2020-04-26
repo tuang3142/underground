@@ -30,6 +30,5 @@ class SessionsController < ApplicationController
   def login_params
     p = params.require(:session).permit(:email, :password, :remember_me)
 
-    p[:email].downcase, p[:password], p[:remember_me]
   end
 end
