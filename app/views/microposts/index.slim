@@ -10,9 +10,8 @@
               iframe.iframe.embed-responsive-item src="https://www.youtube.com/embed/#{m.id}"
             p.card-text = m.description
             - if logged_in?
-              button.btn.btn-default.btn-sm type="button"
-                span.glyphicon.glyphicon-thumbs-up
-                |  Like
-              button.btn.btn-default.btn-sm type="button"
-                span.glyphicon.glyphicon-thumbs-down
-                |  Ekil
+              - flag = m.likes.find { |like| like.user_id == current_user.id }
+              - if flag
+                = button_to 'Unlike', micropost_like_path(m, flag), method: :delete
+              - else
+                = button_to 'Like', micropost_likes_path(m), method: :post

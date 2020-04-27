@@ -1,6 +1,8 @@
 class Micropost < ApplicationRecord
   default_scope -> { order(created_at: :desc) }
 
+  has_many :likes, dependent: :destroy
+
   belongs_to :user
 
   validates :link, presence: true
@@ -15,7 +17,7 @@ class Micropost < ApplicationRecord
     trim data[:description], 200
   end
 
-  def id
+  def video_id
     return if link.nil?
 
     get_id(link)

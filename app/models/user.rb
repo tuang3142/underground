@@ -2,6 +2,7 @@ class User < ApplicationRecord
   attr_accessor :remember_token
 
   has_many :microposts, dependent: :destroy
+  has_many :likes, dependent: :destroy
 
   validates :password, presence: true, length: { minimum: 6 }
 
