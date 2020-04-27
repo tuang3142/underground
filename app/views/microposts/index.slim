@@ -7,7 +7,7 @@
             h4.card-title = m.title
             h6.card-subtitle.mb-2.text-muted Posted by #{m.user.email}
             .embed-responsive.embed-responsive-16by9
-              iframe.iframe.embed-responsive-item src="https://www.youtube.com/embed/#{m.id}"
+              iframe.iframe.embed-responsive-item src="https://www.youtube.com/embed/#{m.video_id}"
             p.card-text = m.description
             .btn-group#like_btn
               - if logged_in?
