@@ -5,7 +5,7 @@ class LikesController < ApplicationController
 
   def create
     if already_liked?
-      flash[:notice] = "Already liked"
+      flash[:notice] = 'Already liked'
     else
       @micropost.likes.create(user_id: current_user.id)
     end
@@ -13,8 +13,8 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    if !(already_liked?)
-      flash[:notice] = "Already unlike"
+    if !already_liked?
+      flash[:notice] = 'Already unlike'
     else
       like.destroy
     end
