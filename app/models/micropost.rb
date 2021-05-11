@@ -20,7 +20,7 @@ class Micropost < ApplicationRecord
   def video_id
     return if link.nil?
 
-    get_id(link)
+    get_id_from_link(link)
   end
 
   private
