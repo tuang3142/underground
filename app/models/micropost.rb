@@ -28,7 +28,7 @@ class Micropost < ApplicationRecord
   def link_must_be_available
     return true unless data.blank?
 
-    errors.add(:link, 'unavailable')
+    errors.add(:link, "unavailable")
     false
   end
 
@@ -39,13 +39,13 @@ class Micropost < ApplicationRecord
   def trim(text, lim)
     return text unless text.length > lim
 
-    text.slice(0, lim - 3) + '...'
+    text.slice(0, lim - 3) + "..."
   end
 
   def get_id_from_link(link)
     return if link.nil?
 
-    id = link.gsub(/(>|<)/i, '').split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/)
+    id = link.gsub(/(>|<)/i, "").split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/)
     return id if id[2].nil?
 
     id[2].split(/[^0-9a-z_\-]/i)[0]
