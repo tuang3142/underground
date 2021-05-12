@@ -4,45 +4,43 @@ class User < ApplicationRecord
   has_many :microposts, dependent: :destroy
   has_many :likes, dependent: :destroy
 
-  validates :password, presence: true, length: { minimum: 6 }
-
   validates :email, presence: true, uniqueness: true
 
-  before_save :downcase_email
+  # before_save :downcase_email
 
-  has_secure_password
+  # has_secure_password
 
-  def remember
-    token = new_token
-    update_attribute(:remember_digest, digest(token))
-  end
+  # def remember
+  #   token = new_token
+  #   update_attribute(:remember_digest, digest(token))
+  # end
 
-  def forget
-    update_attribute(:remember_digest, nil)
-  end
+  # def forget
+  #   update_attribute(:remember_digest, nil)
+  # end
 
-  def authenticated?(remember_token)
-    return false if remeber_token.nil?
+  # def authenticated?(remember_token)
+  #   return false if remeber_token.nil?
 
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
-  end
+  #   BCrypt::Password.new(remember_digest).is_password?(remember_token)
+  # end
 
-  private
+  # private
 
-  def digest(string)
-    cost = if ActiveModel::SecurePassword.min_cost
-      BCrypt::Engine::MIN_COST
-    else
-      BCrypt::Engine.cost
-    end
-    BCrypt::Password.create(string, cost: cost)
-  end
+  # def digest(string)
+  #   cost = if ActiveModel::SecurePassword.min_cost
+  #     BCrypt::Engine::MIN_COST
+  #   else
+  #     BCrypt::Engine.cost
+  #   end
+  #   BCrypt::Password.create(string, cost: cost)
+  # end
 
-  def new_token
-    SecureRandom.urlsafe_base64
-  end
+  # def new_token
+  #   SecureRandom.urlsafe_base64
+  # end
 
-  def downcase_email
-    email&.downcase!
-  end
+  # def downcase_email
+  #   email&.downcase!
+  # end
 end
