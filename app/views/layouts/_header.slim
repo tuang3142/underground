@@ -7,5 +7,4 @@ header.navbar.navbar-fixed-top.navbar-inverse
           li = link_to "Submit a link", new_micropost_path, method: :get
           li = link_to "Log out", logout_path
         - else
-          li = link_to "Log in", login_path
-          li = link_to "Sign Up", signup_path
+          li = google_sign_in_button "Sign in with my Google account", proceed_to: create_login_url
