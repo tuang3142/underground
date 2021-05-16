@@ -1,17 +1,11 @@
 # Underground
 
-Youtube is the most entertaining thing humanity has ever created. There are billions and billions and billions (invoke Trump bot) of hours of content. User this site to watch selectively. Good life you have lived, eh?
+A website that allows user share youtube video and interact with each other. This is also a toy project I created for learning and testing.
+I used to create new projects everytime I learn something new which makes my knowledge scatter. With this project, I could see more clearly how things intertwine.
 
 Live demo on Heroku: [here](https://shrouded-spire-77353.herokuapp.com/)
 
 ## Run locally
-
-Clone this project.
-
-```cmd
-git clone git@github.com:daenylio/underground.git
-cd /underground
-```
 
 Install and update nessessary gems. Install `ruby 2.6.3` if needed. It's recommended to use `rvm`.
 
@@ -37,18 +31,5 @@ rails s
 
 ## Youtube API Key
 
-We use Youtube data API v3 to get the video information. Read the [doc](https://developers.google.com/youtube/v3/docs/) for more clearance.  
-After getting the API key, run `bundle exec figaro install` and add this to the newly created file: `config/application.yml`  
-
-```
-youtube_api_key: [YOUR_KEY]
-```
-
-Ok there might be more to write but I am dead numb. PRs are more than welcome tho!
-
-# Todo
-
-- [ ] Pagy
-- [ ] JavaScript for not reloading page
-- [ ] More tests
-- [ ] Login with google
+We use Youtube data API v3 to get the video information. Read the [doc](https://developers.google.com/youtube/v3/docs/) for more clearance.
+After getting the API key, run `bundle exec figaro install` and add the credential to the newly created file: `config/application.yml`
