@@ -2,14 +2,11 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    email, password, remember_me = login_params
-    user = User.find_by(email: email)
-    if user&.authenticate(password)
-      flash[:success] = 'Login successfully'
-      log_in_and_remember_user(user, remember_me)
+    if user = authenticate_with_google
+      log_in(user)
+      redirect_to root_url
     else
-      flash.now[:danger] = 'Invalid email/password'
-      render :new
+      redirect_to login_url, alert: "Authentication failed"
     end
   end
 
@@ -21,15 +18,21 @@ class SessionsController < ApplicationController
 
   private
 
-  def login_params
-    p = params.require(:session).permit(:email, :password, :remember_me)
-
-    [p[:email].downcase, p[:password], p[:remember_me]]
+  def authenticate_with_google
+    if google_sign_in_id_token
+      google_user = GoogleSignIn::Identity.new(google_sign_in_id_token)
+      User.find_or_create_by(google_id: google_user.user_id, email: google_user.email_address)
+    elsif google_sign_in_error
+      logger.error "Google authentication error: #{google_sign_in_error}"
+      nil
+    end
   end
 
-  def log_in_and_remember_user(user, remember_me)
-    log_in user
-    remember_me ? remember(user) : forget(user)
-    redirect_to root_path
+  def google_sign_in_id_token
+    flash[:google_sign_in][:id_token] || flash[:google_sign_in]["id_token"]
+  end
+
+  def google_sign_in_error
+    flash[:google_sign_in][:error] || flash[:google_sign_in]["error"]
   end
 end

@@ -49,6 +49,6 @@ Ok there might be more to write but I am dead numb. PRs are more than welcome th
 # Todo
 
 - [ ] Pagy
-- [ ] Footer
 - [ ] JavaScript for not reloading page
 - [ ] More tests
+- [ ] Login with google
