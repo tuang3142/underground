@@ -22,6 +22,7 @@ gem "google_sign_in"
 group :development, :test do
   gem "rspec-rails", "~> 4.0.0"
   gem "byebug"
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -31,8 +32,6 @@ group :development do
 end
 
 group :test do
-  gem "shoulda-matchers"
-  gem "rails-controller-testing"
   gem "vcr"
   gem "webmock"
 end
