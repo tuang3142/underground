@@ -1,7 +1,7 @@
 class YoutubeApi
   BASE_URL = "https://www.googleapis.com/youtube/v3/videos?part=id%2C+snippet".freeze
 
-  AUTH_KEY = Figaro.env.youtube_api_key
+  AUTH_KEY = ENV["YOUTUBE_API_KEY"]
 
   def self.get_video_data(video_id)
     options = { query: { id: video_id, key: AUTH_KEY } }
