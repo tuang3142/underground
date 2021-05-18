@@ -7,7 +7,7 @@ Live demo on Heroku: [here](https://shrouded-spire-77353.herokuapp.com/)
 
 ## Run locally
 
-Install and update nessessary gems. Install `ruby 2.6.3` if needed. It's recommended to use `rvm`.
+Install and update nessessary gems. Install `ruby 2.6.3` if needed.
 
 ```cmd
 bundle update && bundle install
@@ -29,7 +29,7 @@ Finally, run the project. It is lived on `localhost:3000`.
 rails s
 ```
 
-## Youtube API Key
+## API key
 
-We use Youtube data API v3 to get the video information. Read the [doc](https://developers.google.com/youtube/v3/docs/) for more clearance.
+In order for the app to work locally, we need Google API for Youtube and OAuth 2.  
 After getting the API key, run `bundle exec figaro install` and add the credential to the newly created file: `config/application.yml`
