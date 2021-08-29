@@ -31,5 +31,12 @@ rails s
 
 ## API key
 
+<<<<<<< HEAD
 In order for the app to work locally, we need Google API for Youtube and OAuth 2.  
 After getting the API key, run `bundle exec figaro install` and add the credential to the newly created file: `config/application.yml`
+=======
+- [ ] Pagy
+- [ ] Footer
+- [ ] JavaScript for not reloading page
+- [ ] More tests
+>>>>>>> parent of 1d3d953 (Merge pull request #6 from tuang3142/login_by_google)

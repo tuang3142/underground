@@ -17,7 +17,6 @@ gem "bootstrap-sass", "3.4.1"
 gem "httparty", "~> 0.13.7"
 gem "figaro", "~> 1.1", ">= 1.1.1"
 gem "capybara"
-gem "google_sign_in"
 
 group :development, :test do
   gem "rspec-rails", "~> 4.0.0"
