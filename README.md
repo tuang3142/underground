@@ -5,6 +5,11 @@ I used to create new projects everytime I learn something new which makes my kno
 
 Live demo on Heroku: [here](https://shrouded-spire-77353.herokuapp.com/)
 
+## Features
+
+- User can log in and create a post by sharing youtube video url.
+- User can interact (like) with other posters.
+
 ## Run locally
 
 Install and update nessessary gems. Install `ruby 2.6.3` if needed.
@@ -17,16 +22,15 @@ Set-up database. Install `psql` if needed.
 Runtest to make sure everything works fine.
 
 ```cmd
-rails db:create
-rails db:migrate
-rails db:migrate RAILS_ENV=test
-rspec /spec
+bin/rails db:create
+bin/rails db:migrate
+bin/rails db:migrate RAILS_ENV=test
 ```
 
 Finally, run the project. It is lived on `localhost:3000`.
 
 ```cmd
-rails s
+bin/rails s
 ```
 
 ## API key

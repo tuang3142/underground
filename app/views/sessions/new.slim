@@ -2,4 +2,15 @@
 h1 Log in
 .row
   .col-md-6.col-md-offset-3
-    = google_sign_in_button "Sign in with my Google account", proceed_to: create_login_url
+    = form_with(url: login_path, scope: :session, local: true) do |f|
+      = f.label :email
+      = f.email_field :email, class: 'form-control'
+      = f.label :password
+      = f.password_field :password, class: 'form-control'
+      = f.label :remember_me, class: "checkbox inline" do
+        = f.check_box :remember_me
+        span Remember me on this computer (FYI: it's 20 years )
+      = f.submit "Log in", class: "btn btn-primary"
+    p
+      | New user? #{link_to "Sign up now!", signup_path}
+
