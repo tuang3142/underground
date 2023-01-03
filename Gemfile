@@ -14,7 +14,7 @@ gem "turbolinks", "~> 5"
 gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", "3.4.1"
-gem "httparty", "~> 0.13.7"
+gem "httparty", "~> 0.21.0"
 gem "figaro", "~> 1.1", ">= 1.1.1"
 gem "capybara"
 
